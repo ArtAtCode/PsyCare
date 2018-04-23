@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements
     private ImageView firstBottomImage;
     private ImageView secondBottomImage;
     private ImageView thirdBottomImage;
-;
     private TextView firstBottomText;
     private TextView secondBottomText;
     private TextView thirdBottomText;
