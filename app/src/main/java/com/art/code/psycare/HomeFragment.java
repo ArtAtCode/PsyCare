@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.youth.banner.Banner;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,18 +21,27 @@ import android.view.ViewGroup;
  * to handle interaction events.
  */
 public class HomeFragment extends Fragment {
-
+    private ArrayList<String> list_path_imgs;
     private OnFragmentInteractionListener mListener;
     public HomeFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        Banner banner = (Banner)view.findViewById(R.id.banner);
+        banner.setImageLoader(new GlideImageLoader());
+        list_path_imgs = new ArrayList<>();
+        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
+        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic259ohaj30ci08c74r.jpg");
+        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2b16zuj30ci08cwf4.jpg");
+        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2e7vsaj30ci08cglz.jpg");
+        banner.setImages(list_path_imgs);
+        banner.start();
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
