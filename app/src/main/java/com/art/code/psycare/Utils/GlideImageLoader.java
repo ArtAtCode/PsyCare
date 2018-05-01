@@ -1,4 +1,4 @@
-package com.art.code.psycare;
+package com.art.code.psycare.Utils;
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,7 +9,7 @@ import com.youth.banner.loader.ImageLoader;
 
 public class GlideImageLoader extends ImageLoader {
     @Override
-    public void displayImage(Context context, Object path, ImageView imageView) {
+    public void displayImage(Context context, Object path, ImageView imageView) {//这里的imageView为R.id.banner
         /**
          注意：
          1.图片加载器由自己选择，这里不限制，只是提供几种使用方法
