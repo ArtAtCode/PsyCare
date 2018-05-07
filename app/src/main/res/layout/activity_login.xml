@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A7D5EA"
+    tools:context=".LoginActivity" >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/forgetpassword_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="10dp"
+            android:text="忘记密码"
+            app:layout_constraintEnd_toEndOf="@+id/login_login"
+            app:layout_constraintTop_toBottomOf="@+id/login_login" />
+
+        <TextView
+            android:id="@+id/register_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="注册"
+            app:layout_constraintStart_toStartOf="@+id/login_login"
+            app:layout_constraintTop_toBottomOf="@+id/login_login" />
+
+        <Button
+            android:id="@+id/login_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/my_button"
+            android:text="登  录"
+            android:textColor="#29ABE2"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/password_login"
+            app:layout_constraintStart_toStartOf="@+id/password_login"
+            app:layout_constraintTop_toBottomOf="@+id/password_login" />
+
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/my_edittext"
+            android:ems="10"
+            android:hint="密码"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNum_login"
+            app:layout_constraintStart_toStartOf="@+id/phoneNum_login"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNum_login" />
+
+        <EditText
+            android:id="@+id/phoneNum_login"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/my_edittext"
+            android:ems="10"
+            android:hint="手机号"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/logo" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
