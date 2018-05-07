@@ -8,10 +8,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -42,7 +43,14 @@ public class MainActivity extends AppCompatActivity implements
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+//        ActionBar actionBar = getSupportActionBar();
+//        if(actionBar!=null) actionBar.hide();
+//        //去掉标题栏
+
+
         setContentView(R.layout.activity_main);
         fragmentManager = getSupportFragmentManager();
         initView();
