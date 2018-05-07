@@ -24,6 +24,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:layout_marginBottom="8dp"
@@ -36,4 +37,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/sentence_read_text"
         app:layout_constraintVertical_bias="0.341" />
+
+    <com.art.code.psycare.Compent.AudioRecorderButton
+        android:layout_width="182dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="按住说话"
+        android:background="@drawable/send_speech_btn_normal_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
