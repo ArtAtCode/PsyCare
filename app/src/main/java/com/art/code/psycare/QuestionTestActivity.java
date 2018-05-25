@@ -18,6 +18,7 @@ public class QuestionTestActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(QuestionTestActivity.this,ResultActivity.class);
                 startActivity(intent);
+                finish();
             }
 
         });

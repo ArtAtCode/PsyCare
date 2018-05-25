@@ -48,6 +48,7 @@ public class ReadSentenceActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(ReadSentenceActivity.this,QuestionTestActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
