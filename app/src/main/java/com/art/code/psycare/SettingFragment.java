@@ -7,6 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.art.code.psycare.Compent.User;
+
+import org.w3c.dom.Text;
+
+import java.util.Objects;
 
 
 /**
@@ -26,6 +33,12 @@ public class SettingFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View view;
+    private MainActivity mainActivity;
+
+    private TextView nickanme;
+    private TextView phone;
 
     private OnFragmentInteractionListener mListener;
 
@@ -49,6 +62,18 @@ public class SettingFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    void init() {
+        view = getView();
+        assert view != null;
+        mainActivity = (MainActivity)getActivity();
+        nickanme = view.findViewById(R.id.nickname_setting);
+        phone = view.findViewById(R.id.phoneNum_setting);
+        mainActivity.user = ((MainActivity) Objects.requireNonNull(getActivity())).user;
+
+        nickanme.setText(mainActivity.user.getmNickname());
+        phone.setText(mainActivity.user.getPhone());
     }
 
     @Override

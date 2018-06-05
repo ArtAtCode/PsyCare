@@ -17,6 +17,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.art.code.psycare.Compent.User;
+
 public class MainActivity extends AppCompatActivity implements
         View.OnClickListener,HomeFragment.OnFragmentInteractionListener,CureFragment.OnFragmentInteractionListener,SettingFragment.OnFragmentInteractionListener{
 
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements
     private int dark = 0xff000000;
     private FragmentManager fragmentManager;
 
+    protected User user;
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 
@@ -56,7 +61,10 @@ public class MainActivity extends AppCompatActivity implements
         initView();
         setChoiceItem(0);
     }
+
     private void initView(){
+
+        user = (User)getIntent().getSerializableExtra("user");
 
         firstBottomImage = (ImageView) findViewById(R.id.first_bottom_image);
         secondBottomImage = (ImageView) findViewById(R.id.second_bottom_image);

@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.art.code.psycare.Compent.User;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText ePhone;
@@ -15,6 +17,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button login;
     private TextView tRegister;
     private TextView tForgetpasswd;
+
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
             case R.id.login_login:
                 Intent login = new Intent(this, MainActivity.class);
+                login.putExtra("user", user);
                 startActivity(login);
                 finish();
                 break;
