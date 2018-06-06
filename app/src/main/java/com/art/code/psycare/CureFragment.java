@@ -1,12 +1,14 @@
 package com.art.code.psycare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 /**
@@ -28,6 +30,10 @@ public class CureFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private ImageView music;
+
+    View view;
 
     public CureFragment() {
         // Required empty public constructor
@@ -64,7 +70,16 @@ public class CureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cure, container, false);
+        view = inflater.inflate(R.layout.fragment_cure, container, false);
+        music = view.findViewById(R.id.music);
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(getActivity(), MusicActivity.class);
+                startActivity(a);
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

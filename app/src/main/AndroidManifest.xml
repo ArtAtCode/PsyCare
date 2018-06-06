@@ -25,7 +25,11 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ForgetpasswordActivity" />
         <activity android:name=".QuestionTestActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".MusicActivity" />
+        <activity android:name=".StoryActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".PassageActivity"></activity>
     </application>
 
 </manifest>
