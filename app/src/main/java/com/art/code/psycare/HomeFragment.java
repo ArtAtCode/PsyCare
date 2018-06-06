@@ -79,14 +79,14 @@ public class HomeFragment extends Fragment {
     public void initBanner(View view){
         banner = (Banner)view.findViewById(R.id.banner);
         banner.setImageLoader(new GlideImageLoader());
-        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
-        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic259ohaj30ci08c74r.jpg");
-        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2b16zuj30ci08cwf4.jpg");
-        list_path_imgs.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2e7vsaj30ci08cglz.jpg");
-        list_title.add("标题1");
-        list_title.add("标题2");
-        list_title.add("标题3");
-        list_title.add("标题4");
+        list_path_imgs.add("http://a.bbkz.net/forum/gallery/images/309498/large/1_fotto1_1189.JPG");
+        list_path_imgs.add("http://www.qqkj.cn/files/beyondpic/2012-6/8/126811182513706.jpg");
+        list_path_imgs.add("http://www.qqkj.cn/files/beyondpic/2012-6/8/126811182538135.jpg");
+        list_path_imgs.add("http://images.ccoo.cn/ablum/20111222/20111222223457581.jpg");
+        list_title.add("心情不好？戳进来");
+        list_title.add("90后情绪多变？");
+        list_title.add("你不知道的危险疾病");
+        list_title.add("你与开心只差一步之遥");
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE);
         banner.setOnClickListener(new View.OnClickListener() {
             @Override

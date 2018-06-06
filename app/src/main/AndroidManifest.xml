@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".ReadSentenceActivity" />
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ForgetpasswordActivity" />
+        <activity android:name=".QuestionTestActivity" />
+        <activity android:name=".ResultActivity"></activity>
     </application>
 
 </manifest>
