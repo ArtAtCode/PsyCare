@@ -18,6 +18,8 @@ import android.view.animation.LinearInterpolator;
 
 import com.art.code.psycare.R;
 
+import static android.support.constraint.Constraints.TAG;
+
 public class ScoreView extends View {
 
     private final int DEFAULT_PADDING = dp2Px(5);
@@ -62,6 +64,7 @@ public class ScoreView extends View {
 
     public ScoreView(Context context) {
         this(context, null);
+        init();
     }
 
     public ScoreView(Context context, AttributeSet attrs) {
@@ -73,16 +76,16 @@ public class ScoreView extends View {
     private void obtainAttrs(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ScoreView);
         lineLength = typedArray.getDimension(R.styleable.ScoreView_lineLength, dp2Px(10));
-        lineColor = typedArray.getColor(R.styleable.ScoreView_lineColor, R.color.deepskyblue);
+        lineColor = typedArray.getColor(R.styleable.ScoreView_lineColor, getResources().getColor(R.color.colorPrimary));
         typedArray.recycle();
     }
 
     private void init() {
-        arrowPaint = createPaint(Color.WHITE, 0, Paint.Style.FILL, 0);
-        arcPaint = createPaint(lineColor, dp2Px(1), Paint.Style.STROKE, 0);
-        bgPaint = createPaint(lineColor, dp2Px(1), Paint.Style.FILL, 0);
+        arrowPaint = createPaint(R.color.colorPrimary, 0, Paint.Style.FILL, 0);
+        arcPaint = createPaint(R.color.colorPrimary, dp2Px(1), Paint.Style.STROKE, 0);
+        bgPaint = createPaint(R.color.colorPrimary, dp2Px(1), Paint.Style.FILL, 0);
         reachProgressPaint = createPaint(R.color.deepskyblue,dp2Px(1), Paint.Style.FILL, 0);//lmj
-        arcReachPaint = createPaint(R.color.darkcyan, dp2Px(1), Paint.Style.STROKE, 0);//lmj
+        arcReachPaint = createPaint(R.color.colorPrimary, dp2Px(1), Paint.Style.STROKE, 0);//lmj
         scoreTextPaint = createPaint(R.color.deepskyblue, 0, Paint.Style.STROKE, dp2Px(26));//lmj
         descTextPaint = createPaint(R.color.deepskyblue, 0, Paint.Style.STROKE, dp2Px(16));//lmj
     }
@@ -168,6 +171,7 @@ public class ScoreView extends View {
         //绘制圆弧
         RectF rectF = new RectF(dp2Px(5) - radius, dp2Px(5) - radius, radius - dp2Px(5), radius - dp2Px(5));
         canvas.drawArc(rectF, 120, curValue * degree, false, arcReachPaint);
+        Log.e(TAG, "drawArcProgress: " + arcReachPaint.getColor() );
 
         //绘制指示方块，方块是从0开始移动某一个位置的
         canvas.rotate(30 + degree * curValue);

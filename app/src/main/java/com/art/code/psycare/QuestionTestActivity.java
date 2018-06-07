@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class QuestionTestActivity extends AppCompatActivity {
+
+    private ImageView back;
 
     Button uploadbtn;
     @Override
@@ -21,6 +24,14 @@ public class QuestionTestActivity extends AppCompatActivity {
                 finish();
             }
 
+        });
+
+        back = findViewById(R.id.back_questiontest);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
         });
     }
 }
