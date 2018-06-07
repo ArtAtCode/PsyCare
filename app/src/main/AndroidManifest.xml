@@ -27,9 +27,10 @@
         <activity android:name=".QuestionTestActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".MusicActivity" />
-        <activity android:name=".StoryActivity" />
+        <activity android:name=".ConsultantActivity" />
         <activity android:name=".VideoActivity" />
-        <activity android:name=".PassageActivity"></activity>
+        <activity android:name=".PassageActivity" />
+        <activity android:name=".PlayMusicActivity" />
     </application>
 
 </manifest>

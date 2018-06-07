@@ -3,6 +3,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ public class HomeFragment extends Fragment {
     private ArrayList<String> list_path_imgs = new ArrayList<>();
     private ArrayList<String> list_title = new ArrayList<>();
     private TextView startTestButton ;
+    private FloatingActionButton startTest;
     Banner banner;
     private OnFragmentInteractionListener mListener;
     public HomeFragment() {
@@ -37,6 +39,14 @@ public class HomeFragment extends Fragment {
         startTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ReadSentenceActivity.class);
+                startActivity(intent);
+            }
+        });
+        startTest = view.findViewById(R.id.startTest_home);
+        startTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),ReadSentenceActivity.class);
                 startActivity(intent);
             }

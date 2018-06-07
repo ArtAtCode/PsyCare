@@ -32,6 +32,7 @@ public class CureFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private ImageView music;
+    private ImageView consultant;
 
     View view;
 
@@ -72,10 +73,18 @@ public class CureFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_cure, container, false);
         music = view.findViewById(R.id.music);
+        consultant = view.findViewById(R.id.consultant);
         music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent a = new Intent(getActivity(), MusicActivity.class);
+                startActivity(a);
+            }
+        });
+        consultant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(getActivity(), ConsultantActivity.class);
                 startActivity(a);
             }
         });
