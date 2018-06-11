@@ -1,8 +1,11 @@
 package com.art.code.psycare.Compent;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Environment;
 import android.os.Handler;
+
+import java.util.Collection;
 import java.util.Random;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
@@ -183,12 +186,14 @@ public class AudioRecorderButton extends AppCompatButton implements AudioManage.
             mCurState = state;
             switch (state) {
                 case STATE_NORMAL:
-                    setBackgroundResource(R.drawable.send_speech_btn_normal_style);
+                    //setBackgroundResource(R.drawable.send_speech_btn_normal_style);
+                    setBackgroundColor(Color.parseColor("#47A9D5"));
                     setText(R.string.push_to_speak);
                     break;
 
                 case STATE_RECORDERING:
-                    setBackgroundResource(R.drawable.send_speech_btn_pres_style);
+                    //setBackgroundResource(R.drawable.send_speech_btn_pres_style);
+                    setBackgroundColor(Color.parseColor("#C3C3C3"));
                     setText(R.string.release_to_send);
                     if (isRecordering) {
                         // 更新Dialog.recording()
@@ -197,7 +202,8 @@ public class AudioRecorderButton extends AppCompatButton implements AudioManage.
                     break;
 
                 case STATE_WANT_TO_CALCEL:
-                    setBackgroundResource(R.drawable.send_speech_btn_pres_style);
+                    //setBackgroundResource(R.drawable.send_speech_btn_pres_style);
+                    setBackgroundColor(Color.parseColor("#C3C3C3"));
                     setText(R.string.release_to_cancel_send);
                     // 更新Dialog.wantCancel()
                     audioDialogManage.wantToCancel();

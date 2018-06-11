@@ -44,7 +44,7 @@
             <ImageView
                 android:id="@+id/passage"
                 android:layout_width="0dp"
-                android:layout_height="158dp"
+                android:layout_height="150dp"
                 android:src="@drawable/passage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
             <ImageView
                 android:id="@+id/video"
                 android:layout_width="0dp"
-                android:layout_height="158dp"
+                android:layout_height="150dp"
                 android:src="@drawable/video"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
             <ImageView
                 android:id="@+id/consultant"
                 android:layout_width="0dp"
-                android:layout_height="158dp"
+                android:layout_height="150dp"
                 android:src="@drawable/story"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
             <ImageView
                 android:id="@+id/music"
                 android:layout_width="0dp"
-                android:layout_height="158dp"
+                android:layout_height="150dp"
                 android:clickable="true"
                 android:src="@drawable/music"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,8 +85,8 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginStart="16dp"
                 android:text="歌 曲"
-                android:textSize="18sp"
                 android:textColor="@color/white"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/music"
                 app:layout_constraintStart_toStartOf="parent" />
 

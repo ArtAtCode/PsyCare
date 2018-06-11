@@ -1,8 +1,10 @@
 package com.art.code.psycare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +42,8 @@ public class SettingFragment extends Fragment {
     private TextView nickanme;
     private TextView phone;
 
+    private ConstraintLayout logout;
+
     private OnFragmentInteractionListener mListener;
 
     public SettingFragment() {
@@ -65,7 +69,6 @@ public class SettingFragment extends Fragment {
     }
 
     void init() {
-        view = getView();
         assert view != null;
         mainActivity = (MainActivity)getActivity();
         nickanme = view.findViewById(R.id.nickname_setting);
@@ -89,7 +92,20 @@ public class SettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting, container, false);
+
+        view = inflater.inflate(R.layout.fragment_setting, container, false);
+
+        logout = view.findViewById(R.id.logout_setting);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

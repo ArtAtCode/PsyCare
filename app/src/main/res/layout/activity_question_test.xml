@@ -86,7 +86,7 @@
                 android:layout_width="51dp"
                 android:layout_height="47dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="60dp"
                 android:background="@drawable/trumpet"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button4" />
@@ -96,7 +96,7 @@
                 android:layout_width="49dp"
                 android:layout_height="47dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="60dp"
                 android:background="@drawable/trumpet"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="120dp"
                 android:background="#47A9D5"
                 android:text="结束并上传"
                 android:textColor="@color/white"
@@ -129,38 +129,44 @@
 
             <TextView
                 android:id="@+id/textView29"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
                 android:layout_marginStart="16dp"
                 android:text="你最近是否患有失眠症？"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button"
                 app:layout_constraintTop_toTopOf="@+id/button" />
 
             <TextView
                 android:id="@+id/textView30"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="你是否容易陷入几种易怒的情绪？"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/button3"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button3"
                 app:layout_constraintTop_toTopOf="@+id/button3" />
 
             <TextView
                 android:id="@+id/textView31"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="你喜欢与人相处还是独处？"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/button5"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button5"
                 app:layout_constraintTop_toTopOf="@+id/button5" />
 
@@ -179,7 +185,6 @@
                 android:id="@+id/imageView5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/button4"
                 app:layout_constraintEnd_toEndOf="@+id/imageView4"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -192,7 +197,6 @@
                 android:id="@+id/imageView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/button6"
                 app:layout_constraintEnd_toEndOf="@+id/imageView5"
                 app:layout_constraintStart_toStartOf="@+id/textView31"

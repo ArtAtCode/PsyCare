@@ -171,7 +171,6 @@ public class ScoreView extends View {
         //绘制圆弧
         RectF rectF = new RectF(dp2Px(5) - radius, dp2Px(5) - radius, radius - dp2Px(5), radius - dp2Px(5));
         canvas.drawArc(rectF, 120, curValue * degree, false, arcReachPaint);
-        Log.e(TAG, "drawArcProgress: " + arcReachPaint.getColor() );
 
         //绘制指示方块，方块是从0开始移动某一个位置的
         canvas.rotate(30 + degree * curValue);
